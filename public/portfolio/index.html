@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="rose">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio de Ana Elisa Sprenger — Desenvolvedora Full Stack em formação. Projetos, currículo e habilidades em desenvolvimento web moderno." />
+  <meta name="author" content="Ana Elisa Sprenger" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ana Elisa Sprenger — Portfólio Full Stack" />
+  <meta property="og:description" content="Design moderno, código limpo e projetos reais." />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <title>Ana Elisa Sprenger — Portfólio Full Stack</title>
+
+  <link rel="icon" href="/iconportfolio.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar" role="banner">
+    <nav class="nav-inner" aria-label="Navegação principal">
+      <a href="#hero" class="brand" aria-label="Início">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-text">ana<span class="brand-slash">/</span>sprenger</span>
+      </a>
+
+      <ul class="nav-links" role="menubar">
+        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projetos" class="nav-link">Projetos</a></li>
+        <li><a href="#jornada" class="nav-link">Jornada</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Trocar tema" aria-haspopup="listbox" aria-expanded="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+          </svg>
+        </button>
+
+        <div class="theme-menu" id="themeMenu" role="listbox" aria-label="Selecionar tema">
+          <button role="option" data-theme-value="rose" class="theme-option"><span class="swatch swatch-rose"></span> Rosa Premium</button>
+          <button role="option" data-theme-value="pastel" class="theme-option"><span class="swatch swatch-pastel"></span> Pastel Criativa</button>
+          <button role="option" data-theme-value="light" class="theme-option"><span class="swatch swatch-light"></span> Claro</button>
+          <button role="option" data-theme-value="dark" class="theme-option"><span class="swatch swatch-dark"></span> Escuro</button>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-blobs" aria-hidden="true">
+        <span class="blob b1"></span>
+        <span class="blob b2"></span>
+        <span class="blob b3"></span>
+      </div>
+      <div class="hero-shape" aria-hidden="true"></div>
+      <div class="hero-shape s2" aria-hidden="true"></div>
+      <div class="hero-gradient" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <span class="hero-eyebrow reveal">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          Disponível para novos projetos
+        </span>
+
+        <h1 class="hero-title" id="heroName" aria-label="Ana Elisa Sprenger">
+          <span class="name-line"><span class="name-word" data-text="Ana">Ana</span> <span class="name-word" data-text="Elisa">Elisa</span></span>
+          <span class="name-line"><span class="name-word accent" data-text="Sprenger">Sprenger</span><span class="name-dot"></span></span>
+        </h1>
+
+        <p class="hero-subtitle reveal">Desenvolvedora Full Stack em Formação</p>
+
+        <p class="hero-age reveal" id="ageCounter" aria-live="polite">calculando idade…</p>
+
+        <p class="hero-desc reveal">
+          Estudante do Ensino Médio integrado ao Técnico em Informática para Internet.
+          Apaixonada por desenvolvimento web, UX/UI e criação de produtos digitais modernos.
+        </p>
+
+        <div class="hero-actions reveal">
+          <a href="assets/pdf/anaelisasprenger.pdf" target="_blank" rel="noopener" class="btn btn-primary magnetic" data-ripple id="btnCurriculo">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Currículo
+          </a>
+          <a href="#projetos" class="btn btn-ghost magnetic" data-ripple>
+            Ver Projetos
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-scroll" aria-hidden="true"><span></span></div>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE ============ -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">01 — Sobre</span>
+          <h2 class="section-title">Um pouco sobre mim</h2>
+          <p class="section-lead">Foco em interfaces limpas, código bem estruturado e experiências elegantes.</p>
+        </header>
+
+        <div class="about-grid">
+          <article class="glass-card reveal">
+            <h3>Formação</h3>
+            <p>Ensino Médio integrado ao Técnico em Informática para Internet, com estudos aprofundados em desenvolvimento web moderno.</p>
+          </article>
+          <article class="glass-card reveal">
+            <h3>Interesses</h3>
+            <p>Front-end, UX/UI, arquitetura de software, análise de dados e criação de produtos digitais.</p>
+          </article>
+          <article class="glass-card reveal">
+            <h3>Objetivo</h3>
+            <p>Evoluir como desenvolvedora full stack e contribuir com soluções que unam design refinado e engenharia sólida.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section-tight" id="skills">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">02 — Skills</span>
+          <h2 class="section-title">Tecnologias &amp; Ferramentas</h2>
+          <p class="section-lead">Stack organizada em camadas — do front-end ao devops.</p>
+        </header>
+
+        <div class="skills-groups" id="skillsGroups">
+          <!-- Preenchido via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ESTATÍSTICAS (GitHub real) ============ -->
+    <section class="section section-tight stats-section" id="stats">
+      <div class="container">
+        <header class="section-head reveal" style="margin-bottom:2rem">
+          <span class="section-tag">03 — GitHub</span>
+          <h2 class="section-title">Estatísticas em tempo real</h2>
+          <p class="section-lead">Dados extraídos diretamente da minha conta <a href="https://github.com/anasprenger" target="_blank" rel="noopener" class="inline-link">@anasprenger</a>.</p>
+        </header>
+
+        <div class="stats-grid">
+          <div class="stat glass-card reveal">
+            <span class="stat-icon" aria-hidden="true">📦</span>
+            <span class="stat-number" id="ghRepos">—</span>
+            <span class="stat-label">Repositórios públicos</span>
+          </div>
+          <div class="stat glass-card reveal">
+            <span class="stat-icon" aria-hidden="true">⭐</span>
+            <span class="stat-number" id="ghStars">—</span>
+            <span class="stat-label">Estrelas recebidas</span>
+          </div>
+          <div class="stat glass-card reveal">
+            <span class="stat-icon" aria-hidden="true">🧠</span>
+            <span class="stat-number" id="ghLangs">—</span>
+            <span class="stat-label">Linguagens usadas</span>
+          </div>
+          <div class="stat glass-card reveal">
+            <span class="stat-icon" aria-hidden="true">👥</span>
+            <span class="stat-number" id="ghFollowers">—</span>
+            <span class="stat-label">Seguidores</span>
+          </div>
+        </div>
+
+        <div class="gh-panels">
+          <article class="glass-card reveal gh-panel">
+            <h3>Linguagens predominantes</h3>
+            <p class="gh-hint">Distribuição calculada a partir dos repositórios públicos.</p>
+            <div class="lang-bars" id="langBars"><span class="gh-loading">Carregando…</span></div>
+          </article>
+          <article class="glass-card reveal gh-panel">
+            <h3>Contribuições &amp; atividade</h3>
+            <p class="gh-hint">Gráficos atualizados automaticamente.</p>
+            <div class="gh-graphs">
+              <img id="ghStreakImg" alt="GitHub streak de anasprenger" loading="lazy" />
+              <img id="ghGraphImg" alt="Estatísticas gerais do GitHub" loading="lazy" />
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJETOS ============ -->
+    <section class="section" id="projetos">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">04 — Projetos</span>
+          <h2 class="section-title">Trabalhos selecionados</h2>
+          <p class="section-lead">Filtre por categoria e explore os projetos.</p>
+        </header>
+
+        <div class="projects-layout">
+          <aside class="categories" aria-label="Categorias de projetos">
+            <button class="category active" data-category="all">Todos</button>
+            <button class="category" data-category="uxui">UX/UI</button>
+            <button class="category" data-category="htmlcss">HTML + CSS</button>
+            <button class="category" data-category="javascript">JavaScript</button>
+            <button class="category" data-category="java">Java</button>
+            <button class="category" data-category="sistemas">Sistemas</button>
+            <button class="category" data-category="python">Python (Dados)</button>
+            <button class="category" data-category="db">Banco de Dados</button>
+            <button class="category" data-category="outros">Outros</button>
+          </aside>
+
+          <div class="projects-grid" id="projectsGrid"><!-- via JS --></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TIMELINE HORIZONTAL ============ -->
+    <section class="section section-tight" id="jornada">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">05 — Jornada</span>
+          <h2 class="section-title">Linha do tempo</h2>
+          <p class="section-lead">Arraste na horizontal para navegar pelas etapas.</p>
+        </header>
+      </div>
+
+      <div class="timeline-wrap reveal" id="timelineWrap">
+        <div class="timeline-track" id="timelineTrack">
+          <div class="timeline-line"><span class="timeline-progress" id="timelineProgress"></span></div>
+          <ol class="timeline-h">
+            <li class="tl-node"><span class="tl-dot"></span><span class="tl-year">Início</span><h4>Primeiros estudos</h4><p>Lógica de programação e pensamento computacional.</p></li>
+            <li class="tl-node"><span class="tl-dot"></span><span class="tl-year">Web</span><h4>Primeiros sites</h4><p>HTML e CSS: estrutura, layouts responsivos e componentes.</p></li>
+            <li class="tl-node"><span class="tl-dot"></span><span class="tl-year">JS</span><h4>JavaScript</h4><p>DOM, eventos, ES6+ e interações modernas.</p></li>
+            <li class="tl-node"><span class="tl-dot"></span><span class="tl-year">SQL</span><h4>Banco de Dados</h4><p>Modelagem, SQL, integração com Firebase.</p></li>
+            <li class="tl-node"><span class="tl-dot"></span><span class="tl-year">POO</span><h4>Java</h4><p>Orientação a objetos e sistemas.</p></li>
+            <li class="tl-node"><span class="tl-dot"></span><span class="tl-year">Data</span><h4>Python</h4><p>Análise de dados e automação.</p></li>
+            <li class="tl-node"><span class="tl-dot"></span><span class="tl-year">Stack</span><h4>React &amp; Node</h4><p>Full stack: do design à publicação.</p></li>
+            <li class="tl-node"><span class="tl-dot"></span><span class="tl-year">Hoje</span><h4>Projetos completos</h4><p>Produtos reais com foco em UX e performance.</p></li>
+          </ol>
+        </div>
+        <div class="timeline-hint" aria-hidden="true">← arraste →</div>
+      </div>
+    </section>
+
+    <!-- ============ CURRÍCULO ============ -->
+    <section class="section section-tight" id="curriculo">
+      <div class="container cta-card reveal">
+        <div>
+          <span class="section-tag">06 — Currículo</span>
+          <h2 class="section-title">Baixe meu currículo</h2>
+          <p class="section-lead">Um resumo completo da minha trajetória, formação e projetos.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="assets/pdf/anaelisasprenger.pdf" target="_blank" rel="noopener" class="btn btn-primary magnetic" data-ripple>Baixar PDF</a>
+          <a href="#contato" class="btn btn-ghost magnetic" data-ripple>Falar comigo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section class="section" id="contato">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">07 — Contato</span>
+          <h2 class="section-title">Vamos conversar</h2>
+          <p class="section-lead">Aberta a oportunidades, colaborações e novos aprendizados.</p>
+        </header>
+
+        <div class="contact-grid">
+          <a class="contact-card glass-card reveal" href="mailto:contato@exemplo.com" aria-label="Enviar e-mail">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div><h4>Email</h4><p>contato@exemplo.com</p></div>
+          </a>
+          <a class="contact-card glass-card reveal" href="https://github.com/anasprenger" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.79 2.73 1.27 3.4.97.11-.76.41-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.69.42.36.79 1.08.79 2.18v3.23c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            <div><h4>GitHub</h4><p>@anasprenger</p></div>
+          </a>
+          <a class="contact-card glass-card reveal" href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8h4.52v14H.24V8zM8.5 8h4.33v1.92h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V22h-4.5v-6.6c0-1.57-.03-3.6-2.2-3.6-2.2 0-2.54 1.72-2.54 3.5V22H8.5V8z"/></svg>
+            <div><h4>LinkedIn</h4><p>/in/anasprenger</p></div>
+          </a>
+          <a class="contact-card glass-card reveal" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <div><h4>Instagram</h4><p>@anasprenger</p></div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">Ana Elisa Sprenger © <span id="year"></span></p>
+        <p class="footer-note">Desenvolvido do zero com foco em performance, acessibilidade e design autoral.</p>
+      </div>
+      <div class="footer-stack" aria-label="Tecnologias utilizadas">
+        <span class="footer-stack-title">Stack</span>
+        <ul class="footer-tech">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript ES6+</li>
+          <li>Canvas API</li>
+          <li>Intersection Observer</li>
+          <li>GitHub REST API</li>
+          <li>Google Fonts</li>
+          <li>Git &amp; GitHub</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- MODAL -->
+  <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <article class="modal-card glass-card">
+      <button class="modal-close" data-close aria-label="Fechar">×</button>
+      <img class="modal-img" id="modalImg" alt="" />
+      <span class="section-tag" id="modalCat"></span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <div class="modal-section"><h4>Objetivo</h4><p id="modalGoal"></p></div>
+      <div class="modal-section"><h4>Problemas resolvidos</h4><p id="modalProblems"></p></div>
+      <div class="modal-section"><h4>Aprendizados</h4><p id="modalLearnings"></p></div>
+      <ul class="badges" id="modalTech"></ul>
+      <div class="modal-actions">
+        <a class="btn btn-primary" id="modalSite" target="_blank" rel="noopener">Ver Site</a>
+        <a class="btn btn-ghost" id="modalRepo" target="_blank" rel="noopener">Código Fonte</a>
+      </div>
+    </article>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
